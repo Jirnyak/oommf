@@ -1,0 +1,123 @@
+
+[Boxsi<36847-Timerts-MacBook-Pro-jirnyak> 07:59:34.108 2026-01-30] 2.0b0 infolog:
+Start: "/Users/jirnyak/oommf-example.mif"
+Options: -exitondone 1 -threads 8
+
+[Boxsi<36847-Timerts-MacBook-Pro-jirnyak> 07:59:34.150 2026-01-30] 2.0b0 LoadProblem error:
+Error loading /Users/jirnyak/oommf-example.mif:
+	Error thrown from inside "Oxs_ExtCreateAndRegister" --- Incomplete or incorrect initialization --- Oxs_Ext initialization error in construction of Oxs_UniformExchange: --- Oxs_Ext ERROR in object Oxs_UniformExchange:: Value associated with MIF input label "A" is not a real number: $A
+-----------
+Stack:
+Error thrown from inside "Oxs_ExtCreateAndRegister" --- Incomplete or incorrect initialization --- Oxs_Ext initialization error in construction of Oxs_UniformExchange: --- Oxs_Ext ERROR in object Oxs_UniformExchange:: Value associated with MIF input label "A" is not a real number: $A
+    while executing
+"Oxs_ExtCreateAndRegister $key $init_str"
+    ('Oxs_Mif' instance method 'ReadMif' line 131)
+    invoked from within
+"_Oxs_Mif0 ReadMif /Users/jirnyak/oommf-example.mif {}"
+    invoked from within
+"Oxs_ProbInit $f $MIF_params "
+-----------
+Additional info: OOMMF {} {Incomplete or incorrect initialization} -1
+
+[Boxsi<36847-Timerts-MacBook-Pro-jirnyak> 07:59:34.164 2026-01-30] 2.0b0 LoadProblem error:
+Error loading /Users/jirnyak/oommf-example.mif:
+	Error thrown from inside "Oxs_ExtCreateAndRegister" --- Incomplete or incorrect initialization --- Oxs_Ext initialization error in construction of Oxs_UniformExchange: --- Oxs_Ext ERROR in object Oxs_UniformExchange:: Value associated with MIF input label "A" is not a real number: $A
+-----------
+Stack:
+Error thrown from inside "Oxs_ExtCreateAndRegister" --- Incomplete or incorrect initialization --- Oxs_Ext initialization error in construction of Oxs_UniformExchange: --- Oxs_Ext ERROR in object Oxs_UniformExchange:: Value associated with MIF input label "A" is not a real number: $A
+    while executing
+"Oxs_ExtCreateAndRegister $key $init_str"
+    ('Oxs_Mif' instance method 'ReadMif' line 131)
+    invoked from within
+"_Oxs_Mif0 ReadMif /Users/jirnyak/oommf-example.mif {}"
+    invoked from within
+"Oxs_ProbInit $f $MIF_params "
+-----------
+Additional info: OOMMF {} {Incomplete or incorrect initialization} -1
+
+[Boxsi<36980-Timerts-MacBook-Pro-jirnyak> 08:00:00.074 2026-01-30] 2.0b0 infolog:
+Start: "/Users/jirnyak/oommf-example.mif"
+Options: -exitondone 1 -threads 8
+
+[Boxsi<36980-Timerts-MacBook-Pro-jirnyak> 08:00:00.132 2026-01-30] 2.0b0 infolog:
+Boxsi version 2.0b0
+Running on: Timerts-MacBook-Pro.local
+OS/machine: Darwin/arm64
+User: jirnyak	PID: 36980
+Number of threads: 8
+Mesh geometry: 20 x 20 x 2 = 800 cells
+Checkpoint file: /Users/jirnyak/oommf-example.restart
+
+[Boxsi<36980-Timerts-MacBook-Pro-jirnyak> 08:00:00.145 2026-01-30] 2.0b0 infolog:
+Loaded "oommf-example.mif", CRC: 0xF060A8BC, 1198 bytes 
+
+[Boxsi<36980-Timerts-MacBook-Pro-jirnyak> 08:00:01.358 2026-01-30] 2.0b0 infolog:
+End "oommf-example.mif"
+
+[Boxsi<37285-Timerts-MacBook-Pro-jirnyak> 08:03:23.930 2026-01-30] 2.0b0 infolog:
+Start: "/Users/jirnyak/oommf/minimal.mif"
+Options: -exitondone 1 -threads 8
+
+[Boxsi<37285-Timerts-MacBook-Pro-jirnyak> 08:03:23.976 2026-01-30] 2.0b0 LoadProblem error:
+Error loading /Users/jirnyak/oommf/minimal.mif:
+	Input file "/Users/jirnyak/oommf/minimal.mif" not in any MIF format
+-----------
+Stack:
+Input file "/Users/jirnyak/oommf/minimal.mif" not in any MIF format
+    while executing
+"_Oxs_Mif0 ReadMif /Users/jirnyak/oommf/minimal.mif {}"
+    invoked from within
+"Oxs_ProbInit $f $MIF_params "
+-----------
+Additional info: OC Oxs_Mif
+
+[Boxsi<37285-Timerts-MacBook-Pro-jirnyak> 08:03:24.001 2026-01-30] 2.0b0 LoadProblem error:
+Error loading /Users/jirnyak/oommf/minimal.mif:
+	Input file "/Users/jirnyak/oommf/minimal.mif" not in any MIF format
+-----------
+Stack:
+Input file "/Users/jirnyak/oommf/minimal.mif" not in any MIF format
+    while executing
+"_Oxs_Mif0 ReadMif /Users/jirnyak/oommf/minimal.mif {}"
+    invoked from within
+"Oxs_ProbInit $f $MIF_params "
+-----------
+Additional info: OC Oxs_Mif
+
+[Boxsi<37372-Timerts-MacBook-Pro-jirnyak> 08:03:32.909 2026-01-30] 2.0b0 infolog:
+Start: "/Users/jirnyak/oommf/minimal.mif"
+Options: -exitondone 1 -threads 8
+
+[Boxsi<37372-Timerts-MacBook-Pro-jirnyak> 08:03:32.981 2026-01-30] 2.0b0 infolog:
+Boxsi version 2.0b0
+Running on: Timerts-MacBook-Pro.local
+OS/machine: Darwin/arm64
+User: jirnyak	PID: 37372
+Number of threads: 8
+Mesh geometry: 2 x 2 x 2 = 8 cells
+Checkpoint file: /Users/jirnyak/oommf/minimal.restart
+
+[Boxsi<37372-Timerts-MacBook-Pro-jirnyak> 08:03:32.986 2026-01-30] 2.0b0 infolog:
+Loaded "minimal.mif", CRC: 0x8CF2CE92, 1105 bytes 
+
+[Boxsi<37372-Timerts-MacBook-Pro-jirnyak> 08:03:33.044 2026-01-30] 2.0b0 infolog:
+End "minimal.mif"
+
+[Boxsi<37555-Timerts-MacBook-Pro-jirnyak> 08:03:52.973 2026-01-30] 2.0b0 infolog:
+Start: "/Users/jirnyak/oommf/minimal.mif"
+Options: -exitondone 1 -threads 8
+
+[Boxsi<37555-Timerts-MacBook-Pro-jirnyak> 08:03:53.043 2026-01-30] 2.0b0 infolog:
+Boxsi version 2.0b0
+Running on: Timerts-MacBook-Pro.local
+OS/machine: Darwin/arm64
+User: jirnyak	PID: 37555
+Number of threads: 8
+Mesh geometry: 2 x 2 x 2 = 8 cells
+Checkpoint file: /Users/jirnyak/oommf/minimal.restart
+
+[Boxsi<37555-Timerts-MacBook-Pro-jirnyak> 08:03:53.048 2026-01-30] 2.0b0 infolog:
+Loaded "minimal.mif", CRC: 0x19D215E0, 1291 bytes 
+
+[Boxsi<37555-Timerts-MacBook-Pro-jirnyak> 08:03:53.873 2026-01-30] 2.0b0 infolog:
+End "minimal.mif"

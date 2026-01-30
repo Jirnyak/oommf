@@ -1,0 +1,60 @@
+# MIF 2.1
+# Minimal OOMMF Example - 10nm x 10nm x 10nm box
+# This is the SIMPLEST simulation possible
+
+# Step 1: Define the GEOMETRY (size of your material)
+Specify Oxs_BoxAtlas:atlas {
+  xrange {0 10e-9}
+  yrange {0 10e-9}
+  zrange {0 10e-9}
+}
+
+# Step 2: Define the MESH (how to divide the material into cells)
+Specify Oxs_RectangularMesh:mesh {
+  cellsize {5e-9 5e-9 5e-9}
+  atlas :atlas
+}
+
+# Step 3: Define MATERIAL PROPERTIES
+# Exchange energy (atoms want to align with neighbors)
+Specify Oxs_UniformExchange {
+  A 1.3e-11
+}
+
+# Demagnetization (shape-dependent magnetic field)
+Specify Oxs_Demag {}
+
+# Step 4: Define DYNAMICS (how magnetization moves)
+Specify Oxs_RungeKuttaEvolve:evolve {
+  alpha 0.5
+}
+
+# Step 5: Define INITIAL MAGNETIZATION
+Specify Oxs_UniformScalarField:Ms {
+  value 8e5
+}
+
+Specify Oxs_UniformVectorField:start {
+  norm 1
+  vector {1 0 0}
+}
+
+# Step 6: OUTPUTS - What data to save
+Destination table mmDataTable
+Destination archive mmArchive
+
+Schedule DataTable table Step 1
+Schedule Oxs_TimeDriver::Magnetization archive Step 1
+
+# Step 7: Run the simulation
+Specify Oxs_TimeDriver {
+  evolver :evolve
+  stopping_time 1e-10
+  stage_count 1
+  mesh :mesh
+  Ms :Ms
+  m0 :start
+  basename minimal
+}
+
+# That's it! This simulates magnetization relaxation for 0.1 nanoseconds

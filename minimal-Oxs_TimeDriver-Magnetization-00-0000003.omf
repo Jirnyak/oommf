@@ -1,0 +1,41 @@
+# OOMMF OVF 2.0
+#
+# Segment count: 1
+#
+# Begin: Segment
+# Begin: Header
+#
+# Title: Oxs_TimeDriver::Magnetization
+# Desc: Oxs vector field output
+# Desc:  MIF source file: /Users/jirnyak/oommf/minimal.mif
+# Desc:  Iteration: 3, State id: 34
+# Desc:  Stage: 0, Stage iteration: 3
+# Desc:  Stage simulation time: 2.52529e-13 s
+# Desc:  Total simulation time: 2.52529e-13 s
+# meshunit: m
+# meshtype: rectangular
+# xbase: 2.5000000000000001e-09
+# ybase: 2.5000000000000001e-09
+# zbase: 2.5000000000000001e-09
+# xnodes: 2
+# ynodes: 2
+# znodes: 2
+# xstepsize: 5.0000000000000001e-09
+# ystepsize: 5.0000000000000001e-09
+# zstepsize: 5.0000000000000001e-09
+# xmin: 0
+# ymin: 0
+# zmin: 0
+# xmax: 1e-08
+# ymax: 1e-08
+# zmax: 1e-08
+# valuedim: 3
+# valuelabels: Magnetization_x Magnetization_y Magnetization_z
+# valueunits: A/m A/m A/m
+#
+# End: Header
+#
+# Begin: Data Binary 8
+@Şwƒ!ÜBÊÓ 3÷i(A'Ñæ±e(¤@Á‚ìÌlKƒÀÊÓ 3÷i(A'Ñæ±e(¤ÀÂ‚ìÌlKƒ@ÊÓ 3÷i(AÁ‚ìÌlKƒ@(Ñæ±e(¤@ÊÓ 3÷i(AÂ‚ìÌlKƒÀ(Ñæ±e(¤ÀÊÓ 3÷i(AÂ‚ìÌlKƒÀ(Ñæ±e(¤ÀÊÓ 3÷i(AÁ‚ìÌlKƒ@(Ñæ±e(¤@ÊÓ 3÷i(A'Ñæ±e(¤ÀÂ‚ìÌlKƒ@ÊÓ 3÷i(A'Ñæ±e(¤@Á‚ìÌlKƒÀ
+# End: Data Binary 8
+# End: Segment

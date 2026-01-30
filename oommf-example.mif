@@ -1,0 +1,61 @@
+# MIF 2.1
+# Simple micromagnetic example: Standard Problem 3
+# Square magnet relaxation
+
+set PI [expr {4*atan(1.)}]
+set MU0 [expr {4*$PI*1e-7}]
+
+# Material parameters for permalloy
+set MS 8e5          ;# Saturation magnetization (A/m)
+set A  1.3e-11      ;# Exchange constant (J/m)
+set KU 0            ;# Anisotropy constant (J/m^3)
+
+Specify Oxs_BoxAtlas:atlas {
+  xrange {0 100e-9}
+  yrange {0 100e-9}
+  zrange {0 10e-9}
+}
+
+Specify Oxs_RectangularMesh:mesh {
+  cellsize {5e-9 5e-9 5e-9}
+  atlas :atlas
+}
+
+# Exchange interaction
+Specify Oxs_UniformExchange {
+  A 1.3e-11
+}
+
+# Demag (dipole-dipole) interaction
+Specify Oxs_Demag {}
+
+# Landau-Lifshitz-Gilbert dynamics
+Specify Oxs_RungeKuttaEvolve:evolve {
+  alpha 0.5
+  gamma_G 2.211e5
+}
+
+# Initial magnetization - uniform in +x direction
+Specify Oxs_UniformScalarField:Ms {
+  value 8e5
+}
+
+Specify Oxs_UniformVectorField:start {
+  norm 1
+  vector {1 0 0}
+}
+
+# Time driver for relaxation
+Specify Oxs_TimeDriver {
+  evolver :evolve
+  stopping_time 1e-9
+  mesh :mesh
+  Ms :Ms
+  m0 :start
+  basename oommf-example
+  vector_field_output_format {text %#.8g}
+}
+
+Destination table mmArchive
+Destination display mmDataTable
+Schedule DataTable table Step 100
