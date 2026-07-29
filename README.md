@@ -179,18 +179,6 @@ The code snippet above illustrates entry-point signatures, structural type bound
 To build and run this repository locally, verify that your environment satisfies system prerequisites (modern C++ compiler / Node.js 18+ / Python 3.10+ / Swift depending on project language).
 
 ```bash
-# Clone repository
-git clone https://github.com/Jirnyak/oommf.git
-cd oommf
-
-# Compile / Install / Execute
-# For C++: cmake -B build && cmake --build build
-# For Python: python main.py
-# For JS/TS: npm install && npm run dev
-```
-
----
-
 ## ⚙️ Configuration & Parameter Matrix
 
 | Config Parameter | Data Type | Default | Operational Impact |
@@ -202,10 +190,6 @@ cd oommf
 ---
 
 ## 📜 Original Developer Documentation
-
-The section below contains 100% of the original developer documentation, specifications, and devlogs created for this repository:
-
----
 
 <div align="center">
 
