@@ -13,6 +13,42 @@
 </div>
 
 ---
+---
+
+## 📸 Authentic Repository Media & Screenshots Gallery
+
+<p align="center"><i>Showing 24 verified screenshot(s) and visual assets directly from the repository source tree:</i></p>
+
+<div align="center">
+
+<a href="app/mmdisp/colorbar.png"><img src="app/mmdisp/colorbar.png" width="48%" alt="colorbar"/></a> &nbsp; <a href="app/mmdisp/colorwheel.png"><img src="app/mmdisp/colorwheel.png" width="48%" alt="colorwheel"/></a>
+<br/>
+<a href="app/mmhelp/doc/oommficon.gif"><img src="app/mmhelp/doc/oommficon.gif" width="48%" alt="oommficon"/></a> &nbsp; <a href="app/mmpe/examples/crescent-tiny.gif"><img src="app/mmpe/examples/crescent-tiny.gif" width="48%" alt="crescent tiny"/></a>
+<br/>
+<a href="app/mmpe/examples/crescent.gif"><img src="app/mmpe/examples/crescent.gif" width="48%" alt="crescent"/></a> &nbsp; <a href="app/mmpe/examples/strip.gif"><img src="app/mmpe/examples/strip.gif" width="48%" alt="strip"/></a>
+<br/>
+<a href="app/oxs/contrib/anv_spintevolve/mask-160-8-4-s.gif"><img src="app/oxs/contrib/anv_spintevolve/mask-160-8-4-s.gif" width="48%" alt="mask 160 8 4 s"/></a> &nbsp; <a href="app/oxs/examples/blockhole.gif"><img src="app/oxs/examples/blockhole.gif" width="48%" alt="blockhole"/></a>
+<br/>
+<a href="app/oxs/examples/layer0.gif"><img src="app/oxs/examples/layer0.gif" width="48%" alt="layer0"/></a> &nbsp; <a href="app/oxs/examples/layer1.gif"><img src="app/oxs/examples/layer1.gif" width="48%" alt="layer1"/></a>
+<br/>
+<a href="app/oxs/examples/layer2.gif"><img src="app/oxs/examples/layer2.gif" width="48%" alt="layer2"/></a> &nbsp; <a href="app/oxs/examples/luigi.gif"><img src="app/oxs/examples/luigi.gif" width="48%" alt="luigi"/></a>
+<br/>
+<a href="app/oxs/examples/oommf.gif"><img src="app/oxs/examples/oommf.gif" width="48%" alt="oommf"/></a> &nbsp; <a href="app/oxs/local/anv_spintevolve/mask-160-8-4-s.gif"><img src="app/oxs/local/anv_spintevolve/mask-160-8-4-s.gif" width="48%" alt="mask 160 8 4 s"/></a>
+<br/>
+<a href="doc/common/contents.gif"><img src="doc/common/contents.gif" width="48%" alt="contents"/></a> &nbsp; <a href="doc/common/oommf.gif"><img src="doc/common/oommf.gif" width="48%" alt="oommf"/></a>
+<br/>
+<a href="doc/common/oommfbig.svg"><img src="doc/common/oommfbig.svg" width="48%" alt="oommfbig"/></a> &nbsp; <a href="doc/common/oommficon.gif"><img src="doc/common/oommficon.gif" width="48%" alt="oommficon"/></a>
+<br/>
+<a href="doc/common/oommficon.svg"><img src="doc/common/oommficon.svg" width="48%" alt="oommficon"/></a> &nbsp; <a href="doc/common/oommfstack.gif"><img src="doc/common/oommfstack.gif" width="48%" alt="oommfstack"/></a>
+<br/>
+<a href="doc/common/oommfstack.svg"><img src="doc/common/oommfstack.svg" width="48%" alt="oommfstack"/></a> &nbsp; <a href="doc/progman/giffiles/oxsclass.gif"><img src="doc/progman/giffiles/oxsclass.gif" width="48%" alt="oxsclass"/></a>
+<br/>
+<a href="doc/progman/giffiles/vsdbg-assert.gif"><img src="doc/progman/giffiles/vsdbg-assert.gif" width="48%" alt="vsdbg assert"/></a> &nbsp; <a href="doc/progman/giffiles/windbg-stacktrace.gif"><img src="doc/progman/giffiles/windbg-stacktrace.gif" width="48%" alt="windbg stacktrace"/></a>
+<br/>
+
+</div>
+
+------
 
 ## 📖 Executive Architectural Overview
 
