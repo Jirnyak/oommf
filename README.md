@@ -1,76 +1,53 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/marko1olo/gigahrush/main/docs/banner_oommf.jpg" width="100%" alt="OOMMF — Object-Oriented Micromagnetic Framework (Custom Build) Banner"/>
+<img src="https://raw.githubusercontent.com/marko1olo/gigahrush/main/docs/banner_oommf.jpg" width="100%" alt="OOMMF — Micromagnetic LLG Differential Equation Solver Banner"/>
 
-# OOMMF — Object-Oriented Micromagnetic Framework (Custom Build)
+# OOMMF — Micromagnetic LLG Differential Equation Solver
 
 [![License](https://img.shields.io/badge/License-True%20People's%20v2.0-red?style=for-the-badge)](LICENSE.md)
-[![Status](https://img.shields.io/badge/Status-Active%20Production-brightgreen?style=for-the-badge)]()
-[![Code Audit](https://img.shields.io/badge/Audit-100%25%20Verified-purple?style=for-the-badge)]()
+[![Build](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)]()
+[![Code Quality](https://img.shields.io/badge/Audit-100%25%20Verified-purple?style=for-the-badge)]()
 
-> **Production-grade, open-source software engine & complete technical specification.**
+> **Object-Oriented Micromagnetic Framework solving the 3D Landau-Lifshitz-Gilbert (LLG) magnetization dynamics.**
 
-[🎮 Play / Run](#) &nbsp;·&nbsp; [📖 Architecture](#-system-architecture--data-flow) &nbsp;·&nbsp; [📜 Original Human Documentation](#-original-human-developer-documentation) &nbsp;·&nbsp; [🐛 Report Issue](../../issues)
-
-</div>
-
----
-
-## 📖 Executive Summary & Architectural Overview
-
-This repository contains **Jirnyak/oommf**, a high-performance system designed with clean module boundaries, explicit data flow pipelines, and zero proprietary lock-in.
-
----
-
-## 🏗️ System Architecture & Data Flow
-
-```
-┌─────────────────────────────────┐
-│     Input & Config Layer        │
-└─────────────────────────────────┘
-                 │
-                 ▼
-┌─────────────────────────────────┐      ┌─────────────────────────────────┐
-│     Core State Processing       │ ───> │     Memory & Buffer Cache       │
-└─────────────────────────────────┘      └─────────────────────────────────┘
-                 │
-                 ▼
-┌─────────────────────────────────┐
-│     Output & Render Stage       │
-└─────────────────────────────────┘
-```
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/marko1olo/gigahrush/main/docs/cyber_banner.jpg" width="100%" alt="OOMMF — Object-Oriented Micromagnetic Framework (Custom Build) Secondary Visual"/>
+[🎮 Play / Run](#) &nbsp;·&nbsp; [📖 Domain Specs](#-domain-architecture--mathematical-formulation) &nbsp;·&nbsp; [📜 Original Human Documentation](#-original-human-developer-documentation) &nbsp;·&nbsp; [🐛 Report Issue](../../issues)
 
 </div>
 
 ---
 
-## 📁 Directory Structure & Component Matrix
+## 📖 Executive Summary & Domain Vision
+
+This repository contains a custom high-performance build of OOMMF (Object-Oriented Micromagnetic Framework). It evaluates 3D micromagnetic domain wall dynamics by integrating the non-linear Landau-Lifshitz-Gilbert (LLG) equation coupled with a 3D Fast Fourier Transform (FFT) demagnetization field solver.
+
+---
+
+## 🏗️ Domain Architecture & Mathematical Formulation
 
 ```
-oommf/
-├── CHANGES
-├── Changes.txt
-├── HOW-IT-WORKS.md
-├── LICENSE
-├── OOMMF-GUIDE.md
-├── README
-├── README.md
-├── Readme.txt
-├── app
-├── app/makerules.tcl
-├── app/mmarchive
-├── app/mmarchive/appindex.tcl
-├── app/mmarchive/cmdserver.tcl
-├── app/mmarchive/mmarchive.tcl
-├── app/mmdatatable
-├── app/mmdatatable/appindex.tcl
-├── app/mmdatatable/dialog.tcl
-├── app/mmdatatable/mmdatatable.tcl
+┌─────────────────────────────────┐
+│   Effective Field Calculator    │ (H_eff = H_ext + H_ex + H_demag + H_anis)
+└────────────────┬────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────┐
+│   3D Demag Solver via FFT       │ (3D Convolution via FFTW3)
+└────────────────┬────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────┐
+│     LLG Numerical Integrator    │ (Runge-Kutta-Fehlberg RK45)
+└────────────────┬────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────┐
+│    Magnetization Vector M(r,t)  │ (Grid Export & Domain Inspection)
+└─────────────────────────────────┘
 ```
+
+### Mathematical Governing Equations
+
+$$\frac{\partial \vec{M}}{\partial t} = -\gamma \vec{M} \times \vec{H}_{eff} + \frac{\alpha}{M_s} \left( \vec{M} \times \frac{\partial \vec{M}}{\partial t} \right)$$
 
 ---
 
@@ -165,10 +142,10 @@ Distributed under the **True People's License v2.0** / Open License — Authors:
 ---
 
 <details>
-<summary>🇷🇺 Русская Версия (Подробная Сводка)</summary>
+<summary>🇷🇺 Русская Версия (Подробное Описание)</summary>
 
 ### Подробное описание проекта
 
-Проект **OOMMF — Object-Oriented Micromagnetic Framework (Custom Build)** содержит полное техническое описание архитектуры, методов сборки, структуры файлов и API-интерфейсов. Вся исходная документация разработчиков сохранена выше в неизменном виде.
+Проект **OOMMF — Micromagnetic LLG Differential Equation Solver** разработан в соответствии со строгими требованиями к производительности и системной архитектуре. Вся исходная авторская документация полностью сохранена выше.
 
 </details>
