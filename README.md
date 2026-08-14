@@ -291,6 +291,66 @@ See [LICENSE](LICENSE) — OOMMF is NIST software; Jirnyak's extensions are open
 
 ---
 
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/marko1olo/gigahrush/main/docs/oommf_vector_field.jpg" width="100%" alt="OOMMF 3D Quantum Micromagnetic Vector Lattice"/>
+
+</div>
+
+---
+
+## 🧲 Micromagnetic Vector Dynamics & GPU LLG Solver
+
+OOMMF simulates magnetic domain wall motion, topological skyrmion textures, and high-frequency spin-wave dynamics across 3D discretized nanostructure lattices:
+
+```mermaid
+graph TD
+    A[Initial Spin State m_x, m_y, m_z] --> B[Effective Field Solver: Exchange + Anisotropy]
+    A --> C[Demag Dipole Field 3D FFT Convolution]
+    B & C --> D[Total Effective Field H_eff]
+    D --> E[Landau-Lifshitz-Gilbert 4th-Order Runge-Kutta]
+    E -->|dm/dt Time Step Evolution| A
+    E -->|Free Energy & Topological Charge Q| F[Hysteresis & Spintronic Metrics]
+```
+
+### ⚡ 1. Landau-Lifshitz-Gilbert (LLG) Integration Kernel
+
+$$\frac{\partial \vec{m}}{\partial t} = -\frac{\gamma}{1 + \alpha^2} \left( \vec{m} \times \vec{H}_{\text{eff}} + \alpha \, \vec{m} \times (\vec{m} \times \vec{H}_{\text{eff}}) \right)$$
+
+* $\vec{m}$: Normalized magnetization unit vector field ($\|\vec{m}\| = 1.0$).
+* $\gamma = 2.211 \times 10^5\text{ m}/(\text{A} \cdot \text{s})$: Gyromagnetic electron ratio.
+* $\alpha$: Gilbert phenomenological damping parameter ($0.001 - 0.5$).
+* $\vec{H}_{\text{eff}}$: Sum of external Zeeman, Heisenberg exchange, uniaxial anisotropy, and demagnetizing dipoles.
+
+```cpp
+// Production C++ / OpenMP LLG Vector Time-Step
+void IntegrateLLGStep(const double* m, const double* Heff, double* dmdt, int numCells, double gamma, double alpha) {
+    const double coeff = -gamma / (1.0 + alpha * alpha);
+    
+    #pragma omp parallel for schedule(static)
+    for (int i = 0; i < numCells; i++) {
+        int idx = i * 3;
+        double mx = m[idx], my = m[idx+1], mz = m[idx+2];
+        double Hx = Heff[idx], Hy = Heff[idx+1], Hz = Heff[idx+2];
+        
+        // m x H
+        double tx = my * Hz - mz * Hy;
+        double ty = mz * Hx - mx * Hz;
+        double tz = mx * Hy - my * Hx;
+        
+        // m x (m x H)
+        double dampingX = my * tz - mz * ty;
+        double dampingY = mz * tx - mx * tz;
+        double dampingZ = mx * ty - my * tx;
+        
+        dmdt[idx]   = coeff * (tx + alpha * dampingX);
+        dmdt[idx+1] = coeff * (ty + alpha * dampingY);
+        dmdt[idx+2] = coeff * (tz + alpha * dampingZ);
+    }
+}
+```
+
 ## 📜 License & Maintainer Standards
 
 Distributed under the **True People's License v2.0** / Open License — Authors: **Jirnyak** & **Adolf Petushkov** (2026). Zero paywalls, zero privatization. Maintainers, contributors, and security auditors are welcome!
