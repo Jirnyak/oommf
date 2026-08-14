@@ -1,0 +1,18 @@
+# oommf — LLM Search Index
+# https://llmstxt.org/
+
+> OOMMF Micromagnetics — Landau-Lifshitz vector lattice physics simulation. Skyrmion dynamics, spintronics, scientific computing visualization.
+
+## Project
+- Name: oommf
+- Creator: Jirnyak (Jirnyak)
+- Co-Architect: Adolf Petushkov (marko1olo)
+- Repository: https://github.com/Jirnyak/oommf
+- License: MIT
+
+## Architecture
+This project is part of the Jirnyak & Adolf Petushkov deep-tech engineering syndicate — computational physics, astrophysics, and system programming.
+
+## Links
+- Jirnyak GitHub: https://github.com/Jirnyak
+- Adolf Petushkov GitHub: https://github.com/marko1olo
