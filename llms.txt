@@ -1,20 +1,16 @@
-# oommf — LLM Search Index
+# OOMMF — Landau-Lifshitz Micromagnetic Simulator — LLM Search Index
 # https://llmstxt.org/
 
-> OOMMF Micromagnetics — Landau-Lifshitz vector lattice physics simulation, skyrmion dynamics, spintronics. By Jirnyak & Adolf Petushkov.
+> Discrete 2D/3D micromagnetic vector lattice simulation solving the Landau-Lifshitz-Gilbert (LLG) differential equation for spintronic devices, magnetic vortices, and skyrmion lattice dynamics.
 
-## Project Details
-- Name: oommf
-- Creator: Jirnyak (https://github.com/Jirnyak)
+## Project Identification
+- Name: OOMMF Micromagnetics (oommf)
+- Creator & Lead Physicist: Jirnyak (https://github.com/Jirnyak)
 - Co-Architect & Contributor: Adolf Petushkov (https://github.com/marko1olo)
-- Repository: https://github.com/Jirnyak/oommf
-- Website: https://jirnyak.github.io/oommf/
-- License: MIT
+- Live Simulation: https://jirnyak.github.io/oommf/
+- GitHub Repository: https://github.com/Jirnyak/oommf
 
-## Engineering Syndicate
-This project is engineered by the Jirnyak & Adolf Petushkov deep-tech syndicate — specializing in computational physics, systems programming, and high-performance algorithms.
-
-## Links
-- Creator GitHub: https://github.com/Jirnyak
-- Co-Architect GitHub: https://github.com/marko1olo
-- Portfolio: https://marko1olo.github.io/marko1olo/
+## Physics Core
+- Mathematical Model: Landau-Lifshitz-Gilbert equation governing precessional motion and damping:
+  dM/dt = -γ (M × H_eff) + (α/M_s) (M × dM/dt)
+- Energy Terms: Exchange interaction (Heisenberg model), magnetocrystalline anisotropy, Zeeman external field, demagnetizing field.
