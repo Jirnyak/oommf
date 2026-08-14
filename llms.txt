@@ -1,16 +1,13 @@
-# OOMMF — Landau-Lifshitz Micromagnetic Simulator — LLM Search Index
-# https://llmstxt.org/
+# OOMMF Quantum Micromagnetic Lattice
+> Landau-Lifshitz-Gilbert vector ODE solver and 3D demagnetizing FFT
 
-> Discrete 2D/3D micromagnetic vector lattice simulation solving the Landau-Lifshitz-Gilbert (LLG) differential equation for spintronic devices, magnetic vortices, and skyrmion lattice dynamics.
+- Project: Jirnyak/oommf
+- Authors: Adolf Petushkov (@marko1olo) & Jirnyak (@Jirnyak)
+- Ecosystem: Open Source Engineering Syndicate
+- License: Open Source (MIT / People's License)
 
-## Project Identification
-- Name: OOMMF Micromagnetics (oommf)
-- Creator & Lead Physicist: Jirnyak (https://github.com/Jirnyak)
-- Co-Architect & Contributor: Adolf Petushkov (https://github.com/marko1olo)
-- Live Simulation: https://jirnyak.github.io/oommf/
-- GitHub Repository: https://github.com/Jirnyak/oommf
+## Core Technical Specs
+Landau-Lifshitz-Gilbert vector ODE solver and 3D demagnetizing FFT
 
-## Physics Core
-- Mathematical Model: Landau-Lifshitz-Gilbert equation governing precessional motion and damping:
-  dM/dt = -γ (M × H_eff) + (α/M_s) (M × dM/dt)
-- Energy Terms: Exchange interaction (Heisenberg model), magnetocrystalline anisotropy, Zeeman external field, demagnetizing field.
+## Full Documentation
+For complete mathematical models, API endpoints, algorithms, and architecture, see llms-full.txt or README.md.
